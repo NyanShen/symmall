@@ -21,14 +21,14 @@
         <module>symmall-miniapp</module>
     </modules>
 
-    <!-- 统一编译配置 -->
+    <!-- 统一编译配置版本号 -->
     <properties>
-        <spring.boot.version>3.5.12</spring.boot.version>
-        <mybatis-plus.version>3.5.5</mybatis-plus.version>
+        <spring.boot.version>3.4.3</spring.boot.version>
+        <mybatis-plus.version>3.5.15</mybatis-plus.version>
         <mysql.version>9.6.0</mysql.version>
         <lombok.version>1.18.38</lombok.version>
-        <maven.compiler.source>25</maven.compiler.source>
-        <maven.compiler.target>25</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -46,7 +46,7 @@
             <!-- MyBatis-Plus -->
             <dependency>
                 <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
             <!-- MySQL驱动 -->
@@ -60,6 +60,14 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+
+            <!-- Spring Boot Test -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring.boot.version}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

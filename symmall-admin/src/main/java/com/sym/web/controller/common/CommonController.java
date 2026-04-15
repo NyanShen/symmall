@@ -12,6 +12,7 @@ import java.util.HashMap;
 @RestController
 @RequestMapping("/common")
 public class CommonController extends BaseController {
+
     @GetMapping("/index")
     public AjaxResult index() {
         HashMap<String, Object> map = new HashMap<>();

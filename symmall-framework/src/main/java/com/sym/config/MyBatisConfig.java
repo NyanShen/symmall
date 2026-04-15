@@ -1,8 +1,8 @@
 package com.sym.config;
 
-import com.baomidou.mybatisplus.annotation.DbType;
+//import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
+//import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * MyBatis 配置
  */
 @Configuration
-@MapperScan("com.sym.**.mapper") // 扫描所有模块的 mapper
+@MapperScan("com.sym.**.mapper")
 public class MyBatisConfig {
 
     /**
@@ -27,11 +27,11 @@ public class MyBatisConfig {
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
         // 添加分页拦截器，指定数据库类型为MySQL，适配项目中使用的MySQL 8.0+
-        PaginationInnerInterceptor paginationInterceptor = new PaginationInnerInterceptor(DbType.MYSQL);
-        // 可选配置（按需开启）
-        paginationInterceptor.setMaxLimit(1000L); // 最大分页条数，防止恶意分页（如一页查询10万条）
-        paginationInterceptor.setOverflow(true); // 当分页页码超过最大页码时，自动跳转到最后一页，避免报错
-        interceptor.addInnerInterceptor(paginationInterceptor);
+//        PaginationInnerInterceptor paginationInterceptor = new PaginationInnerInterceptor(DbType.MYSQL);
+//        // 可选配置（按需开启）
+//        paginationInterceptor.setMaxLimit(1000L); // 最大分页条数，防止恶意分页（如一页查询10万条）
+//        paginationInterceptor.setOverflow(true); // 当分页页码超过最大页码时，自动跳转到最后一页，避免报错
+//        interceptor.addInnerInterceptor(paginationInterceptor);
         return interceptor;
     }
 }
