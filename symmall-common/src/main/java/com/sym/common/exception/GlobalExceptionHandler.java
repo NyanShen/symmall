@@ -63,6 +63,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public AjaxResult handleException(Exception e) {
         log.error("系统异常：{}", e.getMessage());
-        return AjaxResult.error(HttpStatus.ERROR, "服务器繁忙，请稍后重试");
+        String msg = SymStringUtils.isEmpty(e.getMessage()) ? "服务器繁忙，请稍后重试" : e.getMessage();
+        return AjaxResult.error(HttpStatus.ERROR, msg);
     }
 }

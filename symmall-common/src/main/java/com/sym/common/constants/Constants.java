@@ -21,4 +21,14 @@ public class Constants {
      */
     public static final Locale DEFAULT_LOCALE = Locale.SIMPLIFIED_CHINESE;
 
+    /**
+     * token 前缀
+     */
+    public static final String TOKEN_PREFIX = "Bearer ";
+
+    /**
+     * token header
+     */
+    public static final String TOKEN_HEADER = "Authorization";
+
 }
