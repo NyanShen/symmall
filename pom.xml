@@ -23,8 +23,8 @@
 
     <!-- 统一编译配置版本号 -->
     <properties>
-        <spring.boot.version>3.4.3</spring.boot.version>
-        <mybatis-plus.version>3.5.15</mybatis-plus.version>
+        <spring.boot.version>3.5.12</spring.boot.version>
+        <mybatis-plus.version>3.5.5</mybatis-plus.version>
         <mysql.version>9.6.0</mysql.version>
         <lombok.version>1.18.38</lombok.version>
         <maven.compiler.source>17</maven.compiler.source>

@@ -8,7 +8,7 @@ spring:
 
 mybatis-plus:
   mapper-locations: classpath:mapper/**/*.xml
-  type-aliases-package: com.sym.**.domain
+  type-aliases-package: com.sym.**.domain # 实体类包
   configuration:
     map-underscore-to-camel-case: true  # 自动下划线转驼峰
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # SQL打印
